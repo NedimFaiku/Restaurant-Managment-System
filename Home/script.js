@@ -8,7 +8,7 @@ async function getTables() {
         .then(res => res.json())
         .then(jsondata => tables = jsondata)
 }
-// printi()
+printi()
 
 //therritet ne fillim per te marre te dhenat nga api dhe per te gjeneruar html per tavolinat
 async function printi() {
@@ -54,11 +54,82 @@ async function addTables() {
 
 let menu = [];
 let orderOfTable;
+let generateMenu = ``;
+let generateMenuAll = ``;
+let generateOrder = ``;
+
+function generateMenuHeader(id) {
+    generateMenu = `
+    <div class="menuHeader">
+        <h1>Tavolina ${id}</h1>
+    </div>
+    <div id="exitMenu" onclick="exitMenu()"><p>X</p></div>
+    
+    `
+    document.getElementById("menu").innerHTML = generateMenu
+    generateOrderFunc(id)
+    
+}
+
+function generateOrderFunc(id) {
+    let total = 0;
+    generateOrder = `
+    <div id="orderAll">
+    <div id="order">`
+    if (orderOfTable !== undefined) {
+        let acc = 0;
+        orderOfTable.map(item => {
+            generateOrder += `
+            <ul>
+                <li>${item.name}</li>
+                <li>${item.price}</li>
+                <button onclick="deleteItem(${acc++}, ${id})">Fshije</button>
+            </ul>
+                `
+            total = Math.round((total + item.price) * 1e12) / 1e12
+        })
+    }
+    generateOrder += `
+    <p>Totali për pagesë: ${total}</p>
+    `
+    generateOrder += `</div>`
+
+    generateMenuAllFunc(id)
+}
+
+function generateMenuAllFunc(id){
+    generateMenu = ``;
+    generateMenu += generateOrder;
+    generateMenu += `<div id="menuAll">`
+
+    menu.map(item => {
+        generateMenu += `<div class="card">
+            <h2>${item.name}</h2>
+            <p>Çmimi: ${item.price} euro</p>
+            <button onclick="saveItem(${item.id}, ${id})">ADD</button>
+        </div>
+        `
+    })
+    generateMenu += `</div>`
+    document.getElementById("menu").innerHTML += generateMenu
+    generateButtons(id)
+}
+function generateButtons(id){
+    generateMenu = `
+        
+    <div id="saveTheBill">
+        <button onclick="addItems(${id})">Ruaje Porosin</button>
+        <button onclick="payBill(${id})">Perfundoje Porosin</button>
+
+    </div>
+    `
+    document.getElementById("menu").innerHTML += generateMenu
+}
 
 //e hap menyn per secilen tavoline
 async function openMenu(id) {
-    let generateOrder = ``;
-    let generateMenu = ``;
+    generateOrder = ``;
+    generateMenu = ``;
     //http://localhost:3000/tavolinat
     await fetch("http://localhost:3000/tavolinat/" + id)
         .then(res => res.json())
@@ -69,49 +140,39 @@ async function openMenu(id) {
         .then(res => res.json())
         .then(data => menu = data)
 
-    orderOfTable.map(item => {
-        generateOrder += `
-        <ul>
-            <li>${item.name}</li>
-            <li>${item.price}
-        </ul>
-            `
-    })
-    generateMenu = `
-            <div class="menuHeader">
-                <h1>Tavolina ${id}</h1>
-                <button onclick="showMenu()">Shfaq Menyn </button>
-            </div>
-            <div id="exitMenu" onclick="exitMenu()"><p>X</p></div>
-            <div id="menuAll">`
-    menu.map(item => {
-        generateMenu += `<div class="card">
-            <h2>${item.name}</h2>
-            <p>Çmimi: ${item.price} euro</p>
-            <button onclick="(e) =>  {addItem(${item.id}, ${id}, e)}">ADD</button>
-        </div>`
-    })
-    generateMenu += `</div>`
-    document.getElementById("menu").innerHTML = generateMenu
-    document.getElementById("menu").innerHTML += generateOrder
-    document.getElementById("menu").style.display = "flex"
 
-
+    generateMenuHeader(id)
+    
+    
+    document.getElementById("menu").style.display = "block"
 }
 
-//i shton elementet ne porosi
-const addItem = async (itemId, id, event)=>{
+
+//e kryen pagesen e tavolines
+
+async function payBill(id) {
+    await fetch("http://localhost:3000/tavolinat/" + id, {
+        method: "PATCH",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            "order": []
+        })
+    })
+}
+
+//i merr porosite i ruan ne varg
+const saveItem = (itemId, id) => {
     let itemFound = menu.find(item => {
         return item.id == itemId
     });
-    console.log(itemFound)
     orderOfTable.push(itemFound)
-    console.log(orderOfTable)
-    // await fetch("http://localhost:3000/tavolinat/" + id)
-    //     .then(res => res.json())
-    //     .then(data => orderOfTable = data)
-    //     .then(() => orderOfTable.order.push(itemFound))
-    
+    generateMenuHeader(id)
+}
+
+//i shton elementet ne porosi
+async function addItems(id) {
     await fetch("http://localhost:3000/tavolinat/" + id, {
         method: "PATCH",
         headers: {
@@ -121,40 +182,19 @@ const addItem = async (itemId, id, event)=>{
             "order": orderOfTable
         })
     })
-    event.preventDefault();
-    openMenu(id)
 }
-// async function addItem(itemId, id, event ) {
-//     event.preventDefault();
-//     let itemFound = menu.find(item => {
-//         return item.id == itemId
-//     });
-//     console.log(itemFound)
-//     orderOfTable.push(itemFound)
-//     console.log(orderOfTable)
-//     // await fetch("http://localhost:3000/tavolinat/" + id)
-//     //     .then(res => res.json())
-//     //     .then(data => orderOfTable = data)
-//     //     .then(() => orderOfTable.order.push(itemFound))
 
-//     await fetch("http://localhost:3000/tavolinat/" + id, {
-//         method: "PATCH",
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({
-//             "order": orderOfTable
-//         })
-//     })
-//     openMenu(id)
-// }
+//fshirja e nje item nga porosia
+function deleteItem(itemId, id){
+    orderOfTable.splice(itemId, 1);
+    generateMenuHeader(id);
+}
 
 
 //largimi nga menyja
 const exitMenu = () => {
     document.getElementById("menu").setAttribute("style", "display: none");
 };
-// let exitMenu = document.getElementById("exitMenu");
 
 
 //shfaqja e menys
@@ -162,11 +202,3 @@ function showMenu() {
     document.getElementById("menuAll").style.display = "flex"
 }
 
-
-
-// async function deleteTables(id) {
-//     await fetch("http://localhost:3000/tavolinat/" + id, {
-//         method: "DELETE"
-//     })
-//     generateTables()
-// }

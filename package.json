@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "nisja": "json-server --p 5000 --watch db.json"
+    "nisja": "json-server --p 3000 --watch db.json"
   },
   "eslintConfig": {
     "extends": [

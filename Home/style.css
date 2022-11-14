@@ -1,4 +1,7 @@
 /* All */
+html::-webkit-scrollbar{
+    display: none;
+}
 body {
     background-color: rgb(233, 218, 193);
 }
@@ -11,7 +14,6 @@ a{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-basis: 1;
     flex-shrink: 0;
     gap: 90px;
     padding: 150px;
@@ -39,8 +41,11 @@ a{
 #menu{
     display: none;
     position: relative;
-    height: 100vh;
-    background-color: grey;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding: 50px 40px;
+    background-color: rgb(107, 134, 164);
     border: 1px solid black;
     border-radius: 20px;
     align-items: center;
@@ -52,7 +57,7 @@ a{
     text-align: center;
 }
 #menuAll{
-    display: none;
+    display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -83,5 +88,31 @@ a{
 }
 #exitMenu p{
     margin: 3px 0 0;
+}
+#order{
+    width: 28%;
+    height: 100%;
+    text-align: left;
+    background-color: rgba(6, 148, 6, 0.568);
+    border-radius: 20px;
+    align-self: flex-start;
+    padding: 8px;
+}
+#order > ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: rgba(133, 226, 74, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+}
+#menuAll{
+    width: 70%;
+}
+#orderAll{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
 }
 /*  */
