@@ -1,5 +1,5 @@
 {
-  "tavolinat": {
+  "tavolinat": [
     {
       "id": 1,
       "order": []
@@ -107,5 +107,5 @@
       "id": 20,
       "order": []
     }
-  }
+  ]
 }
