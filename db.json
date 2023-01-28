@@ -6,7 +6,23 @@
     },
     {
       "id": 2,
-      "order": []
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 4,
+          "name": "Sok i Zi",
+          "price": 0.5
+        }
+      ]
     },
     {
       "id": 3,
