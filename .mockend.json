@@ -1,66 +1,111 @@
 {
-  "Post": {
-    "_": {
-      "items": 10
+  "tavolinat": {
+    {
+      "id": 1,
+      "order": []
     },
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
+    {
+      "id": 2,
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 4,
+          "name": "Sok i Zi",
+          "price": 0.5
+        }
+      ]
     },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
+    {
+      "id": 3,
+      "order": [
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        },
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        }
+      ]
     },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
+    {
+      "id": 4,
+      "order": []
     },
-    "category": {
-      "string": ["one", "two", "three"]
+    {
+      "id": 5,
+      "order": []
     },
-    "isDraft": {
-      "boolean": {}
+    {
+      "id": 6,
+      "order": []
     },
-    "views": {
-      "int": {
-        "min": 0,
-        "max": 1000
-      }
+    {
+      "id": 7,
+      "order": []
     },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
+    {
+      "id": 8,
+      "order": []
     },
-    "comments": {
-      "hasMany": "Comment"
-    }
-  },
-  "Comment": {
-    "_": {
-      "items": 25
+    {
+      "id": 9,
+      "order": []
     },
-    "email": {
-      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    {
+      "id": 10,
+      "order": []
     },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
+    {
+      "id": 11,
+      "order": []
     },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
+    {
+      "id": 12,
+      "order": []
     },
-    "post": {
-      "belongsTo": "Post"
+    {
+      "id": 13,
+      "order": []
+    },
+    {
+      "id": 14,
+      "order": []
+    },
+    {
+      "id": 15,
+      "order": []
+    },
+    {
+      "id": 16,
+      "order": []
+    },
+    {
+      "id": 17,
+      "order": []
+    },
+    {
+      "id": 18,
+      "order": []
+    },
+    {
+      "id": 19,
+      "order": []
+    },
+    {
+      "id": 20,
+      "order": []
     }
   }
 }
