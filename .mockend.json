@@ -1,5 +1,5 @@
 {
-  "Tavolinat": [
+  "Tavolinat": {
     {
       "id": 1,
       "order": []
@@ -107,21 +107,21 @@
       "id": 20,
       "order": []
     }
-  ],
-  "Porosite": [
+},
+  "Porosite": {
     {
       "id": 8888,
       "table": 5,
       "products": [],
       "price": 10
     }
-  ],
-  "Puntoret": [
+},
+  "Puntoret": {
     {
       "name": "typicode"
     }
-  ],
-  "Menuja": [
+},
+  "Menuja": {
     {
       "id": 1,
       "name": "Hamburger",
@@ -157,8 +157,8 @@
       "name": "Lahmaxhun",
       "price": 1.5
     }
-  ],
-  "PazariDitor": [
+},
+  "PazariDitor": {
     {
       "id": 1,
       "tavolina": 2,
@@ -236,13 +236,13 @@
       "koha": "19:53",
       "totali": 3
     }
-  ],
-  "Admin": [
+},
+  "Admin": {
     {
       "id": 1,
       "name": "Nedim",
       "username": "dimiG",
       "password": "nedo0123"
     }
-  ]
+}
 }
