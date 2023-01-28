@@ -1,233 +1,66 @@
 {
-	"tavolinat": [{
-			"id": 1,
-			"order": []
-		},
-		{
-			"id": 2,
-			"order": [{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 4,
-					"name": "Sok i Zi",
-					"price": 0.5
-				}
-			]
-		},
-		{
-			"id": 3,
-			"order": [{
-					"id": 2,
-					"name": "Pizza",
-					"price": 1.5
-				},
-				{
-					"id": 2,
-					"name": "Pizza",
-					"price": 1.5
-				}
-			]
-		},
-		{
-			"id": 4,
-			"order": []
-		},
-		{
-			"id": 5,
-			"order": []
-		},
-		{
-			"id": 6,
-			"order": []
-		},
-		{
-			"id": 7,
-			"order": []
-		},
-		{
-			"id": 8,
-			"order": []
-		},
-		{
-			"id": 9,
-			"order": []
-		},
-		{
-			"id": 10,
-			"order": []
-		},
-		{
-			"id": 11,
-			"order": []
-		},
-		{
-			"id": 12,
-			"order": []
-		},
-		{
-			"id": 13,
-			"order": []
-		},
-		{
-			"id": 14,
-			"order": []
-		},
-		{
-			"id": 15,
-			"order": []
-		},
-		{
-			"id": 16,
-			"order": []
-		},
-		{
-			"id": 17,
-			"order": []
-		},
-		{
-			"id": 18,
-			"order": []
-		},
-		{
-			"id": 19,
-			"order": []
-		},
-		{
-			"id": 20,
-			"order": []
-		}
-	],
-	"porosite": [{
-		"id": 8888,
-		"table": 5,
-		"products": [],
-		"price": 10
-	}],
-	"puntoret": [{
-		"name": "typicode"
-	}],
-	"menuja": [{
-			"id": 1,
-			"name": "Hamburger",
-			"price": 2.1
-		},
-		{
-			"id": 2,
-			"name": "Pizza",
-			"price": 1.5
-		},
-		{
-			"id": 3,
-			"name": "Sok i Sarit",
-			"price": 0.5
-		},
-		{
-			"id": 4,
-			"name": "Sok i Zi",
-			"price": 0.5
-		},
-		{
-			"id": 5,
-			"name": "Fonta",
-			"price": 0.5
-		},
-		{
-			"id": 6,
-			"name": "Rc Cola",
-			"price": 0.5
-		},
-		{
-			"id": 7,
-			"name": "Lahmaxhun",
-			"price": 1.5
-		}
-	],
-	"pazariDitor": [{
-			"id": 1,
-			"tavolina": 2,
-			"order": [{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				}
-			],
-			"koha": "18:27",
-			"totali": 4.2
-		},
-		{
-			"id": 2,
-			"tavolina": 3,
-			"order": [{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				}
-			],
-			"koha": "18:27",
-			"totali": 6.3
-		},
-		{
-			"id": 3,
-			"tavolina": 3,
-			"order": [{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				},
-				{
-					"id": 1,
-					"name": "Hamburger",
-					"price": 2.1
-				}
-			],
-			"koha": "18:48",
-			"totali": 4.2
-		},
-		{
-			"id": 4,
-			"tavolina": 4,
-			"order": [{
-					"id": 2,
-					"name": "Pizza",
-					"price": 1.5
-				},
-				{
-					"id": 2,
-					"name": "Pizza",
-					"price": 1.5
-				}
-			],
-			"koha": "19:53",
-			"totali": 3
-		}
-	],
-	"admin": [{
-		"id": 1,
-		"name": "Nedim",
-		"username": "dimiG",
-		"password": "nedo0123"
-	}]
+  "Post": {
+    "_": {
+      "items": 10
+    },
+    "cover": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
+    },
+    "title": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
+      }
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "category": {
+      "string": ["one", "two", "three"]
+    },
+    "isDraft": {
+      "boolean": {}
+    },
+    "views": {
+      "int": {
+        "min": 0,
+        "max": 1000
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "comments": {
+      "hasMany": "Comment"
+    }
+  },
+  "Comment": {
+    "_": {
+      "items": 25
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "body": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
