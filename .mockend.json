@@ -4,107 +4,85 @@
             "order": []
         },
         "2": {
-            "order": [
-                {
-                    "id": 1,
-                    "name": "Hamburger",
+            "order": {
+                "1": {
+                    "namee": "Hamburger",
                     "price": 2.1
                 },
-                {
-                    "id": 1,
-                    "name": "Hamburger",
+                "2": {
+                    "namee": "Hamburger",
                     "price": 2.1
                 },
-                {
-                    "id": 4,
-                    "name": "Sok i Zi",
+                "3": {
+                    "namee": "Sok i Zi",
                     "price": 0.5
                 }
-            ]
+}
         },
         "3": {
-            "order": [
-                {
-                    "id": 2,
-                    "name": "Pizza",
-                    "price": 1.5
-                },
-                {
-                    "id": 2,
-                    "name": "Pizza",
-                    "price": 1.5
-                }
-            ]
+            "order": {}
         },
         "4": {
-            "order": []
+            "order": {}
         },
         "5": {
-            "order": []
+            "order": {}
         },
         "6": {
-            "order": []
+            "order": {}
         },
         "7": {
-            "order": []
+            "order": {}
         },
         "8": {
-            "order": []
+            "order": {}
         },
         "9": {
-            "order": []
+            "order": {}
         },
         "10": {
-            "order": []
+            "order": {}
         },
         "11": {
-            "order": []
+            "order": {}
         },
         "12": {
-            "order": []
+            "order": {}
         }
     },
     "Menuja": {
         "1": {
-            "id": 1,
-            "name": "Hamburger",
+            "namee": "Hamburger",
             "price": 2.1
         },
         "2": {
-            "id": 2,
-            "name": "Pizza",
+            "namee": "Pizza",
             "price": 1.5
         },
         "3": {
-            "id": 3,
-            "name": "Sok i Sarit",
+            "namee": "Sok i Sarit",
             "price": 0.5
         },
         "4": {
-            "id": 4,
-            "name": "Sok i Zi",
+            "namee": "Sok i Zi",
             "price": 0.5
         },
         "5": {
-            "id": 5,
-            "name": "Fonta",
+            "namee": "Fonta",
             "price": 0.5
         },
         "6": {
-            "id": 6,
-            "name": "Rc Cola",
+            "namee": "Rc Cola",
             "price": 0.5
         },
         "7": {
-            "id": 7,
-            "name": "Lahmaxhun",
+            "namee": "Lahmaxhun",
             "price": 1.5
         }
     },
     "Admin": {
         "1": {
-            "id": 1,
-            "name": "Nedim",
+            "namew": "Nedim",
             "username": "dimiG",
             "password": "nedo0123"
         }
