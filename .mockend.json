@@ -1,0 +1,248 @@
+{
+  "tavolinat": [
+    {
+      "id": 1,
+      "order": []
+    },
+    {
+      "id": 2,
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 4,
+          "name": "Sok i Zi",
+          "price": 0.5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "order": [
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        },
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "order": []
+    },
+    {
+      "id": 5,
+      "order": []
+    },
+    {
+      "id": 6,
+      "order": []
+    },
+    {
+      "id": 7,
+      "order": []
+    },
+    {
+      "id": 8,
+      "order": []
+    },
+    {
+      "id": 9,
+      "order": []
+    },
+    {
+      "id": 10,
+      "order": []
+    },
+    {
+      "id": 11,
+      "order": []
+    },
+    {
+      "id": 12,
+      "order": []
+    },
+    {
+      "id": 13,
+      "order": []
+    },
+    {
+      "id": 14,
+      "order": []
+    },
+    {
+      "id": 15,
+      "order": []
+    },
+    {
+      "id": 16,
+      "order": []
+    },
+    {
+      "id": 17,
+      "order": []
+    },
+    {
+      "id": 18,
+      "order": []
+    },
+    {
+      "id": 19,
+      "order": []
+    },
+    {
+      "id": 20,
+      "order": []
+    }
+  ],
+  "porosite": [
+    {
+      "id": 8888,
+      "table": 5,
+      "products": [],
+      "price": 10
+    }
+  ],
+  "puntoret": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "menuja": [
+    {
+      "id": 1,
+      "name": "Hamburger",
+      "price": 2.1
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "price": 1.5
+    },
+    {
+      "id": 3,
+      "name": "Sok i Sarit",
+      "price": 0.5
+    },
+    {
+      "id": 4,
+      "name": "Sok i Zi",
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "name": "Fonta",
+      "price": 0.5
+    },
+    {
+      "id": 6,
+      "name": "Rc Cola",
+      "price": 0.5
+    },
+    {
+      "id": 7,
+      "name": "Lahmaxhun",
+      "price": 1.5
+    }
+  ],
+  "pazariDitor": [
+    {
+      "id": 1,
+      "tavolina": 2,
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        }
+      ],
+      "koha": "18:27",
+      "totali": 4.2
+    },
+    {
+      "id": 2,
+      "tavolina": 3,
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        }
+      ],
+      "koha": "18:27",
+      "totali": 6.3
+    },
+    {
+      "id": 3,
+      "tavolina": 3,
+      "order": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        },
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 2.1
+        }
+      ],
+      "koha": "18:48",
+      "totali": 4.2
+    },
+    {
+      "id": 4,
+      "tavolina": 4,
+      "order": [
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        },
+        {
+          "id": 2,
+          "name": "Pizza",
+          "price": 1.5
+        }
+      ],
+      "koha": "19:53",
+      "totali": 3
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Nedim",
+      "username": "dimiG",
+      "password": "nedo0123"
+    }
+  ]
+}
