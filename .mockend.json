@@ -1,11 +1,9 @@
 {
   "Tavolinat": {
-    {
-      "id": 1,
+    "id": 1: {
       "order": []
     },
-    {
-      "id": 2,
+    "id": 2:{
       "order": [
         {
           "id": 1,
